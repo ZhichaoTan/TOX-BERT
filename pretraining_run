@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+(nohup python -u sentiment_pretrain.py --arch medium > sentiment_pretrain_medium.log 2>&1 ;
+nohup python -u sentiment_pretrain.py --arch small > sentiment_pretrain_small.log 2>&1 ;
+nohup python -u knowledge_pretrain.py --arch small > knowledge_pretrain_small.log 2>&1 ;
+nohup python -u knowledge_pretrain.py --arch medium > knowledge_pretrain_medium.log 2>&1)&
